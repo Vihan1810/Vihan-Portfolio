@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Vihan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .header h1 {
+            font-size: 3em;
+            color: #8a2be2;
+        }
+        .header p {
+            font-size: 1.2em;
+            color: #dcdcdc;
+        }
+        .header .buttons {
+            margin-top: 20px;
+        }
+        .header .buttons a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #8a2be2;
+            transition: background-color 0.3s ease;
+        }
+        .header .buttons a:hover {
+            background-color: #5d1491;
+        }
+        .about {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .about h2 {
+            font-size: 2.5em;
+            color: #8a2be2;
+        }
+        .about p {
+            font-size: 1.1em;
+            color: #dcdcdc;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .contact {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .contact h2 {
+            font-size: 2.5em;
+            color: #8a2be2;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+        }
+        .contact form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #8a2be2;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact form button:hover {
+            background-color: #5d1491;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #222;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            color: #fff;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .experience {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .experience h2 {
+            font-size: 2.5em;
+            color: #8a2be2;
+        }
+        .experience .content {
+            text-align: left;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .experience .content h3 {
+            font-size: 1.5em;
+            color: #8a2be2;
+            margin-top: 20px;
+        }
+        .experience .content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .experience .content ul li {
+            font-size: 1.1em;
+            color: #dcdcdc;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Hi, I'm Vihan</h1>
+            <p>A Frontend Developer</p>
+            <div class="buttons">
+                <a href="#" id="hireMeBtn">Hire Me</a>
+                <a href="#experience">Experience</a>
+            </div>
+        </div>
+        <div class="about">
+            <h2>About Me</h2>
+            <p>Hi!, Im Vihan, Born in Vadodara(GJ) in 2008. I am an enthusiastic and Resourceful person that likes to learn. I like to prioritise the harder of my tasks up first. I'm a big basketball enthusiast and speak French partially.</p>
+        </div>
+        <div id="experience" class="experience">
+            <h2>Experience</h2>
+            <div class="content">
+                <h3>Professional Experience</h3>
+                <ul>
+                    <li>Developed 2 responsive websites using HTML, CSS, and JavaScript.</li>
+                    <li>Partially competent in python programming.</li>
+                    <li>Speaks multiple languages including French, English, Gujarati and Hindi.</li>
+                </ul>
+                <h3>Achievements and Feats</h3>
+                <ul>
+                    <li>Completed a course from Udemy for python coding.</li>
+                    <li>Completed a course for Abacus calculations in 2018.</li>
+                    <li>Certified in mediocre Python, HTML, CSS and JavaScript.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" name="name" placeholder="Full Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="tel" name="phone" placeholder="Phone Number">
+                <input type="text" name="subject" placeholder="Subject">
+                <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Information</h2>
+            <p>Email: vihan@example.com</p>
+            <p>Response Time: 24-48 hours</p>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("hireMeBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
